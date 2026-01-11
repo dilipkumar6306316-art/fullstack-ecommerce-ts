@@ -19,7 +19,7 @@ A production-grade e-commerce platform built with React, TypeScript and Node.js 
 - React Router
 
 ## Installation
-git clone https://github.com/your-username/andrometakart.git  
+git clone https://github.com/dilipkumar6306316-art/fullstack-ecommerce-ts.git  
 cd  fullstack-ecommerce
 npm install  
 npm start  
