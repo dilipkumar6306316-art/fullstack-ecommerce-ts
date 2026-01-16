@@ -11,18 +11,11 @@ import HomePage from "./homepage";
 
 
 
-  export function addToCart() {
-
-    console.log("cart value:", cart);
-
-        
-  
-  };
 
 
 
 
-export default function MarketplaceHome() {
+export default function MarketplaceHome({addToCart,Screen}) {
   const [quickView, setQuickView] = useState(null);
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
@@ -89,6 +82,8 @@ export default function MarketplaceHome() {
       const [screen,setScreen]=useState("");
 
 
+
+
       
   return (
   
@@ -117,7 +112,16 @@ export default function MarketplaceHome() {
           </ul>
         )}
       </div>
+
+
+
+
+
+
     
+
+
+
 
 
 
@@ -126,7 +130,7 @@ export default function MarketplaceHome() {
   <section className="hero">
     <h1>Explore the Future of Shopping</h1>
     <p>Smart gadgets · Fashion · Lifestyle</p>
-    <button>Shop Now</button>
+    <button onClick={() => {Screen("homepagelist")}}>Shop Now</button>
   </section>
 
 

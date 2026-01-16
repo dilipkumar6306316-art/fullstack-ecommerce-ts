@@ -18,6 +18,7 @@ import SearchBar from './frontend/pages/search/page'
 import HomePage from './frontend/homepage'
 import HomePageList from './frontend/homepageList'
 import MarketplaceHome from './frontend/marketplace'
+import PaymentModal from './frontend/pages/payQR/page'
 
 
 
@@ -27,22 +28,13 @@ function App() {
 
   return (
   <>
-  {/* <MarketplaceHome></MarketplaceHome>
-  <HomePageList></HomePageList>
-  <HomePage></HomePage>
-  <SearchBar></SearchBar>
-  <Ho></Ho>
-  <Hom></Hom>
-  <SellerProducts></SellerProducts>
-  <SellerDashboard></SellerDashboard>
-  <AdminDashboard></AdminDashboard>
-  <Payment></Payment>
-  <MyOrders></MyOrders>
-  <UserProfile></UserProfile>
-  <Register></Register>
-  <OtpLogin></OtpLogin>
   
-  <Cart></Cart> */}
+  {/* <SellerProducts></SellerProducts>
+  <SellerDashboard></SellerDashboard>
+  <AdminDashboard></AdminDashboard> */}
+
+
+  
 
 
   <Home></Home>

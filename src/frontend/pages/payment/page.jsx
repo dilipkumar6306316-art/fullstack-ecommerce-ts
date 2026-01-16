@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PaymentModal from "../payQR/page";
 
 
 export default function Payment({ setScreen }) {
@@ -15,6 +16,10 @@ export default function Payment({ setScreen }) {
     orderSummary.subtotal +
     orderSummary.delivery +
     orderSummary.tax;
+
+
+      const [showPayment, setShowPayment] = useState(false);
+
 
   return (
     <div className="payment-page">
@@ -124,9 +129,32 @@ export default function Payment({ setScreen }) {
           <span>₹{total}</span>
         </div>
 
-        <button className="pay-btn" onClick={() => {setScreen("myorder")}}>
+        {/* <button className="pay-btn" onClick={() => {setScreen("myorder")}}>
           Pay ₹{total}
-        </button>
+        </button> */}
+
+
+
+              <button className="pay-btn" onClick={() => setShowPayment(true)}>
+    Pay ₹{total}
+</button>
+
+      {showPayment && (
+  <PaymentModal
+    amount={total}   // example total
+    onClose={() => setShowPayment(false)}
+  />
+)}
+
+
+
+
+
+
+
+
+
+
 
         <p className="secure">
           🔒 Secure transaction

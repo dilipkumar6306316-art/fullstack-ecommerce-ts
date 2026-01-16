@@ -6,15 +6,12 @@ import Register from "../resistration/page";
 import Cart from "../cart/page";
 import MarketplaceHome from "../../marketplace";
 
-import { FaCalendarPlus } from "react-icons/fa";
-
-import { FaCartPlus } from "react-icons/fa";
-
-import { RxAvatar } from "react-icons/rx";
 import OtpLogin from "../otp/page";
 import Payment from "../payment/page";
 import MyOrders from "../myorder/page";
 import UserProfile from "../userProfile/page";
+import HomePageList from "../../homepageList";
+
   
 
 
@@ -25,19 +22,34 @@ const Home =()=>{
 
 
 
+      const [cart, setCart] = useState([]);
+
+      const addToCart = (product) => {
+        setCart([...cart, product]);
+      };
+
+
+
   
   
   return (
     <>
 
-    <header  className="header">
+    <header style={{padding:"20px"}}  className="header">
               <div className="logo"  onClick={()=>setScreen("home")}><h3>E-Commerce</h3></div>
               
               <div className="nav">
                 <span onClick={()=>setScreen("login")}>Login</span>
                 <span onClick={()=>setScreen("registration")}>Signup</span>
-                <span onClick={()=>setScreen("cart")}>  Cart (0)</span>
+                <span onClick={()=>setScreen("cart")}>Cart<sup style={{color:"red" , fontSize:"15px"}}>{cart.length}</sup></span>
                 <span onClick={()=>setScreen("myAccount")}> MyAccount</span>
+                
+
+
+
+
+
+                
 
               </div>
             </header>
@@ -53,6 +65,9 @@ const Home =()=>{
               {screen ==="payment" && <Payment ></Payment>}
               {screen==="myorder" && <MyOrders></MyOrders>}
               {screen==="myAccount" && <UserProfile></UserProfile>}
+              {screen==="homepagelist" && <HomePageList addToCart={addToCart}></HomePageList>}
+              
+
     
 
 
@@ -69,7 +84,19 @@ const Home =()=>{
 
 
 
-{screen==="home" &&   <MarketplaceHome></MarketplaceHome>}
+{screen==="home" &&   <MarketplaceHome addToCart={addToCart} Screen={setScreen}></MarketplaceHome>}
+
+
+
+
+
+
+
+{/* 
+<Header></Header>
+<Headr></Headr>
+
+ */}
 
 
 

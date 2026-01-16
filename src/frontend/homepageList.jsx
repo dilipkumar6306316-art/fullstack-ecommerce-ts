@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-export default function HomePageList() {
+export default function HomePageList({addToCart}) {
   const [quickView, setQuickView] = useState(null);
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
@@ -93,6 +93,9 @@ export default function HomePageList() {
         )}
       </div>
 
+
+      
+
       {/* PRODUCTS LIST */}
       <section className="product-list">
         {filteredProducts.length === 0 && (
@@ -110,7 +113,7 @@ export default function HomePageList() {
               <h3>{p.name}</h3>
               <p className="price">₹{p.price}</p>
               <p>{p.desc}</p>
-              <button className="primary">Add to Cart</button>
+              <button className="primary" onClick={addToCart}>Add to Cart</button>
             </div>
           </div>
         ))}
