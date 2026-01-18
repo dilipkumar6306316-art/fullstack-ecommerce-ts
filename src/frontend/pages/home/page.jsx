@@ -1,4 +1,4 @@
-import HomePage from "../../homepage";
+
 import { useState } from "react";
 import Login from "../login/page";
 import Footer from "../footer/page";
@@ -43,14 +43,6 @@ const Home =()=>{
                 <span onClick={()=>setScreen("registration")}>Signup</span>
                 <span onClick={()=>setScreen("cart")}>Cart<sup style={{color:"red" , fontSize:"15px"}}>{cart.length}</sup></span>
                 <span onClick={()=>setScreen("myAccount")}> MyAccount</span>
-                
-
-
-
-
-
-                
-
               </div>
             </header>
 
@@ -91,12 +83,6 @@ const Home =()=>{
 
 
 
-
-{/* 
-<Header></Header>
-<Headr></Headr>
-
- */}
 
 
 

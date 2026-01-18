@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { products as allProducts, categories, sortOptions } from "./data";
-import Cart from "./pages/cart/page";
-import Register from "./pages/resistration/page";
-import Login from "./pages/login/page";
+
 import HomePage from "./homepage";
 
 
