@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { products as allProducts, categories, sortOptions } from "./data";
 
 import HomePage from "./homepage";
+import Product3DPreview from "../components/productDetails";
 
 
 
@@ -110,6 +111,8 @@ export default function MarketplaceHome({addToCart,Screen}) {
           </ul>
         )}
       </div>
+
+
 
 
 
@@ -329,13 +332,13 @@ export default function MarketplaceHome({addToCart,Screen}) {
 
       
       <div className="product-card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5sL0sd7hOfYPv5J7G1wcVDHxce91z0CuuSQ&s" />
-        <h3>Party-Cake</h3>
+        <Product3DPreview />
+        <h3>Shoese-Jordon</h3>
         <p className="price">
-          <span className="mrp">₹3999</span>
-          <span className="sp">₹2799</span>
+          <span className="mrp">₹39999</span>
+          <span className="sp">₹27999</span>
         </p>
-        <button>Out of Stock</button>
+        <button>Add to Cart</button>
       </div>
 
     </div>
